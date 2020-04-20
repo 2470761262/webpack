@@ -12,7 +12,7 @@ module.exports = {
   entry: './src/js/index.js',
   output: {
     filename: 'js/[name].js',
-    path: resolve(__dirname, 'build'),
+    path: resolve(__dirname, 'dist')
   },
   module: {
     rules: [
@@ -20,34 +20,51 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: () => [require('postcss-preset-env')()],
-            },
-          },
-        ],
+              plugins: () => [require('postcss-preset-env')()]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.ts[x]?$/,
+        loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node-modules/,
+        use: [
+          'babel-loader',
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true
+            }
+          }
+        ]
       },
       {
         test: /\.less$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               ident: 'postcss',
-              plugins: () => [require('postcss-preset-env')()],
-            },
+              plugins: () => [require('postcss-preset-env')()]
+            }
           },
-          'less-loader',
-        ],
+          'less-loader'
+        ]
       },
       {
         // 处理样式文件里的图片引用
@@ -57,15 +74,15 @@ module.exports = {
           // 图片大小小于8kb 转换为base64
           limit: 8 * 1024,
           esModule: false,
-          name: 'img/[hash:10].[ext]',
-        },
+          name: 'img/[hash:10].[ext]'
+        }
       },
       {
         // 处理html文件里直接引用的url文件
         test: /\.html$/,
-        loader: 'html-loader',
-      },
-    ],
+        loader: 'html-loader'
+      }
+    ]
   },
   plugins: [
     // new CleanWebpackPlugin(),
@@ -74,11 +91,11 @@ module.exports = {
       template: './src/view/index.html', // 指定模板路径
       minifyCss: true, // 压缩页面内的css
       minifyJS: true, // 压缩页面内的js
-      removeAttrbuteQuotes: true, // 删除注释
+      removeAttrbuteQuotes: true // 删除注释
     }),
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: 'css/[name].css'
     }),
-    new OptimizeCssAssetsWebpackPlugin(),
-  ],
+    new OptimizeCssAssetsWebpackPlugin()
+  ]
 };

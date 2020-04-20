@@ -5,5 +5,5 @@ export default {
   say() {
     console.log('hello,', this.name);
   },
-  name: '郑然',
+  name: '郑然'
 };

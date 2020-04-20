@@ -25,7 +25,8 @@ module.exports = {
     "global-require": 0,
     "linebreak-style": [0 ,"error", "windows"], 
     "no-console":"off",
-    "no-multiple-empty-lines":[1]
+    "no-multiple-empty-lines":[1],
+    'comma-dangle': [2, 'never'],
     // 'accessor-pairs': 2,
     // 'arrow-spacing': [
     //   2,
@@ -48,7 +49,7 @@ module.exports = {
     //     properties: 'always'
     //   }
     // ],
-    // 'comma-dangle': [2, 'never'],
+    // 
     // 'comma-spacing': [
     //   2,
     //   {

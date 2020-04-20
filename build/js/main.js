@@ -122,13 +122,26 @@ var _test = __webpack_require__(/*! ./test */ "./src/js/test.js");
 
 var _test2 = _interopRequireDefault(_test);
 
+var _tstest = __webpack_require__(/*! ./tstest.ts */ "./src/js/tstest.ts");
+
+var _tstest2 = _interopRequireDefault(_tstest);
+
 __webpack_require__(/*! ../css/test1.css */ "./src/css/test1.css");
 
 __webpack_require__(/*! ../css/test.less */ "./src/css/test.less");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/*
+ * @Author: your name
+ * @Date: 2020-04-20 10:01:41
+ * @LastEditTime: 2020-04-20 11:15:33
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \webpack\src\js\index.js
+ */
 console.log(_test2.default, _test.age);
+
 var av = function av() {
   var a = 55;
   a += 5;
@@ -143,6 +156,7 @@ var cc = {
     c: 5
   }]
 };
+_tstest2.default.typeHellow('hello wolrd');
 console.log(cc, 3646434);
 // test.say()
 
@@ -170,6 +184,17 @@ exports.default = {
 
   name: '郑然'
 };
+
+/***/ }),
+
+/***/ "./src/js/tstest.ts":
+/*!**************************!*\
+  !*** ./src/js/tstest.ts ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (1:24)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> function typeHellow(name:string){\n|     console.log(name);\n| }");
 
 /***/ })
 
