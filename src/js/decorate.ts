@@ -1,12 +1,18 @@
-
-
-class Hello {
-    @DefaultValue("world")
-    greeting: string;
+import { say } from "./decorator2";
+interface Animal {
+  name: string;
+  eat(): void;
 }
-function DefaultValue(value: string) {
-    return function (target: any, propertyName: string) {
-        target[propertyName] = value;
-    }
+class Dog implements Animal {
+  name: string;
+  constructor() {}
+  @say([
+    "今天就吃老八秘制小汉堡",
+    "即实惠，还管饱。凑豆腐，腐掳，加柠檬",
+    "你看这汉堡做的行不行",
+  ])
+  eat() {}
 }
-console.log(new Hello().greeting);// 输出: world
+const dog = new Dog();
+dog.eat();
+
