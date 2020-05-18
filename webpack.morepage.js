@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const baseWebpack = require('./webpack.base.js');
 // html模板
 // entries函数
-const entries = function () {
+function entries() {
   const pageJs = resolve(__dirname, 'src/pagejs/');
   const jsAll = glob.sync(`${pageJs}/*.{js,jsx}`);
   const entryJson = {};
@@ -14,7 +14,7 @@ const entries = function () {
     entryJson[filename] = item;
   });
   return entryJson;
-};
+}
 const entriesMap = entries();
 function addPagePlugins() {
   //
