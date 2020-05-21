@@ -9,7 +9,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    sorry: ['./src/js/good', './src/js/hello']
+  },
   output: {
     filename: 'js/[name].js',
     path: resolve(__dirname, 'dist')
