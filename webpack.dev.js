@@ -25,7 +25,7 @@ const dev = {
     port: 3000,
     compress: true,
     // ot: true,
-    hotOnly: true
+    hotOnly: true // hot会刷新页面，hotOnly不会如果失败输出控制台
   //  quiet: true
   }
 };
