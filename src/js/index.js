@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 10:01:41
- * @LastEditTime: 2020-05-21 09:49:50
+ * @LastEditTime: 2020-05-25 20:15:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack\src\js\index.js
@@ -13,12 +13,17 @@ import hello from './hello';
 import '../css/test1.css';
 import '../css/test.less';
 
+if (module.hot) {
+  module.hot.accept('./good', () => {
+    console.log('godd刷新');
+    // good();
+  });
+}
 console.log(test, age);
-
-good.say();
-hello.say();
+good();
+hello();
 const av = () => {
-  let a = 55;
+  let a = 5555;
   a += 5;
   return a;
 };

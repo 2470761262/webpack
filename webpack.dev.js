@@ -11,17 +11,22 @@ const dev = {
   },
   devtool: '#source-map',
   plugins: [
+    // 打印更新的模块路径
+    new webpack.NamedModulesPlugin(),
+    // 热更新插件
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.isNow': 'true'
     })
   ],
   devServer: {
     contentBase: resolve(__dirname, 'dist'),
-    progress: true,
+    //  progress: true,
     port: 3000,
     compress: true,
-    hot: true,
-    quiet: true
+    // ot: true,
+    hotOnly: true
+  //  quiet: true
   }
 };
 module.exports = merge(baseWebpack, dev);
