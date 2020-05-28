@@ -43,7 +43,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node-modules/,
         use: [
-          'babel-loader',
+          // 'babel-loader',
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true
+            }
+          },
           {
             loader: 'eslint-loader',
             options: {
