@@ -12,6 +12,7 @@ import good from './good';
 import hello from './hello';
 import '../css/test1.css';
 import '../css/test.less';
+import './test4.ts';
 
 if (module.hot) {
   module.hot.accept('./good', () => {
