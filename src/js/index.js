@@ -13,6 +13,8 @@ import hello from './hello';
 import '../css/test1.css';
 import '../css/test.less';
 import './test4.ts';
+import './test555.ts';
+
 
 if (module.hot) {
   module.hot.accept('./good', () => {
