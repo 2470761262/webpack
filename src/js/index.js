@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 10:01:41
- * @LastEditTime: 2020-06-06 15:38:39
+ * @LastEditTime: 2020-06-06 15:44:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack\src\js\index.js
@@ -13,6 +13,9 @@ import hello from './hello';
 import '../css/test1.css';
 import '../css/test.less';
 // import Providejshh from './Providejshh';
+import './test4.ts';
+import './test555.ts';
+
 
 if (module.hot) {
 //   module.hot.accept('./good', () => {
