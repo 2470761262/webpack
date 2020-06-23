@@ -11,12 +11,16 @@ module.exports = {
         use: [
           /* config.module.rule('sorry').use('eslint') */
           {
-            loader: 'gg-loader',
+            loader: 'eslint-loader',
             options: {
               rules: {
                 semi: 'off'
               }
             }
+          },
+          /* config.module.rule('sorry').use('jsx') */
+          {
+            loader: 'jsx-loader'
           }
         ]
       }

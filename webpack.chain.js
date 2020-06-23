@@ -19,7 +19,7 @@ config.module
       semi: 'off'
     }
   });
-config.module.rule('sorry').use('gg').loader('gg-loader');
+config.module.rule('sorry').use('jsx').loader('jsx-loader');
 
 const writerStream = fs.createWriteStream('chain.js');
 writerStream.write(`module.exports = ${config.toString()};\n`, 'UTF8');
