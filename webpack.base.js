@@ -26,6 +26,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
+          './loaderDemo/demo.js',
           {
             loader: 'postcss-loader',
             options: {
