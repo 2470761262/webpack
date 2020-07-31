@@ -11,7 +11,9 @@ class Dog implements Animal {
     "即实惠，还管饱。凑豆腐，腐掳，加柠檬",
     "你看这汉堡做的行不行",
   ])
-  eat() {}
+  eat() {
+      console.log("5555");
+  }
 }
 const dog = new Dog();
 dog.eat();

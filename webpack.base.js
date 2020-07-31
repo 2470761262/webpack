@@ -17,6 +17,7 @@ module.exports = {
     filename: 'js/[name].js',
     path: resolve(__dirname, 'dist')
   },
+  mode: 'development',
   module: {
     rules: [
       {

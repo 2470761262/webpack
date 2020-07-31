@@ -6,6 +6,7 @@ export function say(arr: Array<string>) {
         arr.forEach((i) => {
           console.log(i + "\n");
         });
+        describe.value();
       },
     };
   };
