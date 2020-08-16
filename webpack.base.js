@@ -17,6 +17,7 @@ module.exports = {
     filename: 'js/[name].[hash].js',
     path: resolve(__dirname, 'dist')
   },
+  mode: 'development',
   module: {
     rules: [
       {
@@ -26,6 +27,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
+          './loaderDemo/demo.js',
           {
             loader: 'postcss-loader',
             options: {

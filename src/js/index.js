@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 10:01:41
- * @LastEditTime: 2020-06-06 15:44:07
+ * @LastEditTime: 2020-07-31 10:57:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack\src\js\index.js
@@ -16,7 +16,11 @@ import '../css/test.less';
 import './test4.ts';
 import './test555.ts';
 
-
+setTimeout(() => {
+  import('./good').then((e) => {
+    e.default();
+  });
+}, 500);
 if (module.hot) {
 //   module.hot.accept('./good', () => {
 //     console.log('godd刷新');
@@ -44,5 +48,5 @@ const cc = {
 tstest.typeHellow('hello wolrd');
 console.log(cc, 3646434);
 console.log(process.env.isNow, 'process.env.isNow');
-// console.log(Providejshh);
-// test.say()
+console.log(Providejshh);
+test.say();

@@ -118,6 +118,10 @@ interface Cat222222222 {
   name: string;
   run(): void;
 }
+
+
+let sfsfgx:Omit<Cat222222222,'run'> = {name:"555"}
+
 function testAnimal(animal: Animal22222222) {
   return animal as Cat222222222;
 }
@@ -161,11 +165,81 @@ console.log(tomg);
 // const tom1 = getCacheData("tom") as Cat;
 // console.log(tom1, "cat");
 
+interface lele{
+    length: number | string;
+}
 
-interface TreeListType {
-  title:string;
-  childFlag:boolean;
-  idList:Array<number>;
-  checkboxSelect:number;
-  child?:Array<TreeListType>;
+function hello<T extends lele>(arg:T):T{
+    console.log(arg.length);
+    return arg;
+}
+interface curNew{
+    new<T>():T;
+}
+
+
+function hello1<T>(cur:curNew): T{
+    return new cur();
+}
+
+hello1(new function(){})
+
+
+interface Shace{
+    color:string;
+}
+interface Square extends Shace{
+    sideLength:number;
+}
+
+let suquer = <Square>{};
+
+
+
+type Todo = {
+    id: number;
+    text: string;
+    done: boolean;
+  }
+  
+  const todo: Todo = {
+    id: 1,
+    text: "Learn TypeScript keyof",
+    done: false
+  }
+ 
+  function prop<T , K extends keyof T>(obj: T, key: K) {
+    return obj[key];
+  }
+
+  const id = prop(todo, "id"); // const id: number
+  const text = prop(todo, "text"); // const text: string
+  const done = prop(todo, "done"); // const done: boolean
+
+
+
+   // Person 类
+class Person5g {
+    name: string;
+    sayHello() {
+        console.log('tag', `Helo ${ this.name }!`)
+    }
+}
+
+// Student 类
+class Studentsgx {
+    grade: number;
+
+    study(name:string) {
+        console.log('tag', ' I need Study!')
+    }
+}
+class SmartObject implements Person5g, Studentsgx {
+
+    // // Person
+     name: string = 'person';
+     sayHello: () => void;
+    // // Activatable
+     grade: number = 3;
+     study: () => void;
 }
