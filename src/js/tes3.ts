@@ -23,6 +23,7 @@ interface IsArg {
   callee: Function;
 }
 
+
 function sum(a, b, c) {
   let arg: IArguments | IsArg = arguments;
   console.log(arg);
@@ -159,3 +160,12 @@ let tomg = animal as Cat;
 console.log(tomg);
 // const tom1 = getCacheData("tom") as Cat;
 // console.log(tom1, "cat");
+
+
+interface TreeListType {
+  title:string;
+  childFlag:boolean;
+  idList:Array<number>;
+  checkboxSelect:number;
+  child?:Array<TreeListType>;
+}

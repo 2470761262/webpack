@@ -1,4 +1,4 @@
 export default function say() {
-  console.log('good js');
-  console.log('你好1sfgg123f34342s');
+  console.log('good js1');
+  console.log('你好1sfgg123sffg34xvb342s');
 }
