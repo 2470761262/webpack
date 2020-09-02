@@ -15,7 +15,7 @@ const dev = {
     // 添加别名
     alias: {
       '@': resolve('src'),
-      Providejshh: resolve('src/js/Providejshh.js')
+      "Providejshh": resolve('./src/js/Providejshh.js')
     }
   },
   devtool: '#source-map',

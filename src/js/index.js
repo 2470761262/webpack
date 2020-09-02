@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 10:01:41
- * @LastEditTime: 2020-07-31 10:57:16
+ * @LastEditTime: 2020-09-02 15:05:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack\src\js\index.js
@@ -48,5 +48,6 @@ const cc = {
 tstest.typeHellow('hello wolrd');
 console.log(cc, 3646434);
 console.log(process.env.isNow, 'process.env.isNow');
-console.log(Providejshh);
+const zz = Providejshh;
+console.log(zz.default(), 'xxxx');
 test.say();
