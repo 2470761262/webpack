@@ -14,7 +14,7 @@ module.exports = {
     sorry: ['./src/js/good', './src/js/hello']
   },
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash].js',
     path: resolve(__dirname, 'dist')
   },
   mode: 'development',

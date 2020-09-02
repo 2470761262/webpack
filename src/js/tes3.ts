@@ -23,6 +23,7 @@ interface IsArg {
   callee: Function;
 }
 
+
 function sum(a, b, c) {
   let arg: IArguments | IsArg = arguments;
   console.log(arg);
