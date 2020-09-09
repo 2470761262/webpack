@@ -1,24 +1,10 @@
 module.exports = {
   module: {
     rules: [
-      /* config.module.rule('sorry') */
+      /* config.module.rule('sorryx') */
       {
-        test: /\.js$/,
-        enforce: 'pre',
-        include: [
-          'src'
-        ],
         use: [
-          /* config.module.rule('sorry').use('eslint') */
-          {
-            loader: 'eslint-loader',
-            options: {
-              rules: {
-                semi: 'off'
-              }
-            }
-          },
-          /* config.module.rule('sorry').use('jsx') */
+          /* config.module.rule('sorryx').use('jsx') */
           {
             loader: 'jsx-loader'
           }
