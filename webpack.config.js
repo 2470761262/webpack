@@ -18,7 +18,7 @@ module.exports = {
             process.env.NODE_ENV === 'development' ? 'http://localhost:3000/' : '../'
   },
   devtool: '#source-map',
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {

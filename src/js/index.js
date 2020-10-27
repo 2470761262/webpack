@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 10:01:41
- * @LastEditTime: 2020-09-02 15:05:59
+ * @LastEditTime: 2020-10-27 18:17:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \webpack\src\js\index.js
@@ -12,6 +12,7 @@ import good from './good';
 import hello from './hello';
 import '../css/test1.css';
 import '../css/test.less';
+import '../css/test.css';
 // import Providejshh from './Providejshh';
 import './test4.ts';
 import './test555.ts';
@@ -29,6 +30,7 @@ if (module.hot) {
   module.hot.accept();
 }
 console.log(test, age);
+console.log(2134574);
 good();
 hello();
 const av = () => {

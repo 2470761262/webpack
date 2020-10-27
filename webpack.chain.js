@@ -22,8 +22,8 @@ config.module
 config.module.rule('sorry').use('jsx').loader('jsx-loader');
 config.module.rule('sorryx').use('jsx').loader('jsx-loader');
 
-console.log(config.module.rules.delete("sorry"));
-config.module.delete("sorry")
+//console.log(config.module.rules.delete("sorry"));
+//config.module.delete("sorry")
 const writerStream = fs.createWriteStream('chain.js');
 writerStream.write(`module.exports = ${config.toString()};\n`, 'UTF8');
 writerStream.end();

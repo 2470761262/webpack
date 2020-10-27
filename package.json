@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --inline",
     "build": "webpack --config webpack.base.js",
+    "config": "webpack --config webpack.config.js",
     "open": "webpack-dev-server --inline --config  webpack.dev.js",
     "more": "webpack --config webpack.morepage.js"
   },

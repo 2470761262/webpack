@@ -1,10 +1,24 @@
 #title {
-  color: red;
+    color: red;
 }
 
 .test1 {
-  background: url(../img/test1.png);
-  width: 200px;
-  height: 200px;
-  background-size: 100% 100%;
+    background: url(../img/test1.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+}
+
+.te2 {
+    background: url(../img/test1.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
+}
+
+.te3 {
+    background: url(../img/test1.png);
+    width: 200px;
+    height: 200px;
+    background-size: 100% 100%;
 }

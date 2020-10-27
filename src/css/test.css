@@ -1,11 +1,26 @@
 body {
-  background-color: pink;
-  display: flex;
-  backface-visibility: hidden;
+    background-color: pink;
+    display: flex;
+    backface-visibility: hidden;
 }
+
 .test {
-  width: 52px;
-  color: red;
-  height: 51px;
-  background: url(../img/test.png);
+    width: 52px;
+    color: red;
+    height: 51px;
+    background: url(../img/test.png);
+}
+
+.a {
+    width: 52px;
+    color: red;
+    height: 51px;
+    background: url(../img/test.png);
+}
+
+.b {
+    width: 52px;
+    color: red;
+    height: 51px;
+    background: url(../img/test.png);
 }
